@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Eggcelent.NoActionBar">
-        <activity android:name=".BoiledMenuActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".MenuActivity"></activity>
+        <receiver
+            android:name=".TimerExpiredReceiver"
+            android:enabled="true"
+            android:exported="false"></receiver>
+
+        <activity android:name=".BoiledMenuActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MenuActivity" />
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name">
