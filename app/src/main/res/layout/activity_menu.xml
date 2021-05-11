@@ -55,11 +55,12 @@
             android:id="@+id/boiled_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/layout_button"
             android:clickable="true"
-            android:layout_gravity="center"
             android:orientation="horizontal"
-            android:layout_marginBottom="15dp">
+            android:paddingRight="100dp">
 
             <ImageView
                 android:id="@+id/boiled_menu_image"
@@ -76,24 +77,25 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|end"
                 android:layout_margin="5dp"
+                android:clickable="false"
+                android:fontFamily="@font/gaegu_regular"
                 android:paddingEnd="5dp"
                 android:paddingRight="5dp"
-                android:clickable="false"
+                android:text="@string/boiled_text"
                 android:textColor="@color/white"
-                android:fontFamily="@font/gaegu_regular"
-                android:textSize="30sp"
-                android:text="@string/boiled_text" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/poached_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/layout_button"
             android:clickable="true"
-            android:layout_gravity="center"
             android:orientation="horizontal"
-            android:layout_marginBottom="15dp">
+            android:paddingRight="80dp">
 
             <ImageView
                 android:id="@+id/poached_menu_image"
@@ -111,23 +113,24 @@
                 android:layout_gravity="center|end"
                 android:layout_margin="5dp"
                 android:clickable="false"
+                android:fontFamily="@font/gaegu_regular"
                 android:paddingEnd="5dp"
                 android:paddingRight="5dp"
+                android:text="@string/poached_text"
                 android:textColor="@color/white"
-                android:fontFamily="@font/gaegu_regular"
-                android:textSize="30sp"
-                android:text="@string/poached_text" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/scrambled_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/layout_button"
             android:clickable="true"
-            android:layout_gravity="center"
             android:orientation="horizontal"
-            android:layout_marginBottom="15dp">
+            android:paddingRight="60dp">
 
             <ImageView
                 android:id="@+id/scrambled_menu_image"
@@ -144,13 +147,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|end"
                 android:layout_margin="5dp"
+                android:clickable="false"
+                android:fontFamily="@font/gaegu_regular"
                 android:paddingEnd="5dp"
                 android:paddingRight="5dp"
-                android:clickable="false"
+                android:text="@string/scrambled_text"
                 android:textColor="@color/white"
-                android:fontFamily="@font/gaegu_regular"
-                android:textSize="30sp"
-                android:text="@string/scrambled_text" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout

@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pale_yellow"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_back_arrow"
+        android:backgroundTint="@color/darker_brown" />
+
+    <!--
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +29,7 @@
             app:popupTheme="@style/Theme.Eggcelent.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
+    -->
 
     <include layout="@layout/content_main" />
 
