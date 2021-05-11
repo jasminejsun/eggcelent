@@ -41,7 +41,7 @@ class BoiledMenuActivity : AppCompatActivity() {
         }
 
         boiledOptionFour.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, TwelveMinuteActivity::class.java)
             intent.putExtra("INITIAL_SCREEN_ID", 1)
             startActivity(intent)
         }

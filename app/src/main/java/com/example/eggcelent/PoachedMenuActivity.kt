@@ -41,7 +41,7 @@ class PoachedMenuActivity : AppCompatActivity() {
         }
 
         poachedOptionFour.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, TwelveMinuteActivity::class.java)
             intent.putExtra("INITIAL_SCREEN_ID", 2)
             startActivity(intent)
         }

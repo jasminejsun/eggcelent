@@ -12,34 +12,34 @@ import android.view.MenuItem
 import android.widget.ImageButton
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.example.eggcelent.util.TenMinuteNotificationUtil
-import com.example.eggcelent.util.TenMinutePrefUtil
+import com.example.eggcelent.util.TwelveMinuteNotificationUtil
+import com.example.eggcelent.util.TwelveMinutePrefUtil
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.util.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 
-class TenMinuteActivity : AppCompatActivity() {
+class TwelveMinuteActivity : AppCompatActivity() {
 
     companion object {
         @RequiresApi(Build.VERSION_CODES.KITKAT)
         fun setAlarm(context: Context, nowSeconds: Long, secondsRemaining: Long): Long {
             val wakeUpTime = (nowSeconds + secondsRemaining) * 1000
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            val intent = Intent(context, TenMinuteTimerExpiredReceiver::class.java)
+            val intent = Intent(context, TwelveMinuteTimerExpiredReceiver::class.java)
             val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
             alarmManager.setExact(AlarmManager.RTC_WAKEUP, wakeUpTime, pendingIntent)
-            TenMinutePrefUtil.setAlarmSetTime(nowSeconds, context)
+            TwelveMinutePrefUtil.setAlarmSetTime(nowSeconds, context)
             return wakeUpTime
         }
 
         fun removeAlarm(context: Context) {
-            val intent = Intent(context, TenMinuteTimerExpiredReceiver::class.java)
+            val intent = Intent(context, TwelveMinuteTimerExpiredReceiver::class.java)
             val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             alarmManager.cancel(pendingIntent)
-            TenMinutePrefUtil.setAlarmSetTime(0, context)
+            TwelveMinutePrefUtil.setAlarmSetTime(0, context)
         }
 
         val nowSeconds: Long
@@ -77,10 +77,6 @@ class TenMinuteActivity : AppCompatActivity() {
                 val intent = Intent(this, PoachedMenuActivity::class.java)
                 startActivity(intent);
             }
-            else if (initialScreenId == 4) {
-                val intent = Intent(this, SunnySideUpPopupActivity::class.java)
-                startActivity(intent);
-            }
         }
 
         fab_start.setOnClickListener { v ->
@@ -107,7 +103,7 @@ class TenMinuteActivity : AppCompatActivity() {
         initTimer()
 
         removeAlarm(this)
-        TenMinuteNotificationUtil.hideTimerNotification(this)
+        TwelveMinuteNotificationUtil.hideTimerNotification(this)
     }
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
@@ -117,18 +113,18 @@ class TenMinuteActivity : AppCompatActivity() {
         if (timerState == TimerState.Running) {
             timer.cancel()
             val wakeUpTime = setAlarm(this, nowSeconds, secondsRemaining)
-            TenMinuteNotificationUtil.showTimerRunning(this, wakeUpTime)
+            TwelveMinuteNotificationUtil.showTimerRunning(this, wakeUpTime)
         } else if (timerState == TimerState.Paused) {
-            TenMinuteNotificationUtil.showTimerPaused(this)
+            TwelveMinuteNotificationUtil.showTimerPaused(this)
         }
 
-        TenMinutePrefUtil.setPreviousTimerLengthSeconds(timerLengthSeconds, this)
-        TenMinutePrefUtil.setSecondsRemaining(secondsRemaining, this)
-        TenMinutePrefUtil.setTimerState(timerState, this)
+        TwelveMinutePrefUtil.setPreviousTimerLengthSeconds(timerLengthSeconds, this)
+        TwelveMinutePrefUtil.setSecondsRemaining(secondsRemaining, this)
+        TwelveMinutePrefUtil.setTimerState(timerState, this)
     }
 
     private fun initTimer() {
-        timerState = TenMinutePrefUtil.getTimerState(this)
+        timerState = TwelveMinutePrefUtil.getTimerState(this)
 
         setNewTimerLength()
 
@@ -140,11 +136,11 @@ class TenMinuteActivity : AppCompatActivity() {
             setPreviousTimerLength()
 
         secondsRemaining = if (timerState == TimerState.Running || timerState == TimerState.Paused)
-            TenMinutePrefUtil.getSecondsRemaining(this)
+            TwelveMinutePrefUtil.getSecondsRemaining(this)
         else
             timerLengthSeconds
 
-        val alarmSetTime = TenMinutePrefUtil.getAlarmSetTime(this)
+        val alarmSetTime = TwelveMinutePrefUtil.getAlarmSetTime(this)
         if (alarmSetTime > 0)
             secondsRemaining -= nowSeconds - alarmSetTime
 
@@ -166,7 +162,7 @@ class TenMinuteActivity : AppCompatActivity() {
 
         progress_countdown.progress = 0
 
-        TenMinutePrefUtil.setSecondsRemaining(timerLengthSeconds, this)
+        TwelveMinutePrefUtil.setSecondsRemaining(timerLengthSeconds, this)
         secondsRemaining = timerLengthSeconds
 
         updateButtons()
@@ -187,13 +183,13 @@ class TenMinuteActivity : AppCompatActivity() {
     }
 
     private fun setNewTimerLength() {
-        val lengthInMinutes = TenMinutePrefUtil.getTimerLength(this)
+        val lengthInMinutes = TwelveMinutePrefUtil.getTimerLength(this)
         timerLengthSeconds = (lengthInMinutes * 60L)
         progress_countdown.max = timerLengthSeconds.toInt()
     }
 
     private fun setPreviousTimerLength() {
-        timerLengthSeconds = TenMinutePrefUtil.getPreviousTimerLengthSeconds(this)
+        timerLengthSeconds = TwelveMinutePrefUtil.getPreviousTimerLengthSeconds(this)
         progress_countdown.max = timerLengthSeconds.toInt()
     }
 

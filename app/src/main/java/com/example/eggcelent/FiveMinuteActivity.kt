@@ -27,7 +27,7 @@ class FiveMinuteActivity : AppCompatActivity() {
         fun setAlarm(context: Context, nowSeconds: Long, secondsRemaining: Long): Long {
             val wakeUpTime = (nowSeconds + secondsRemaining) * 1000
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            val intent = Intent(context, TimerExpiredReceiver::class.java)
+            val intent = Intent(context, FiveMinuteTimerExpiredReceiver::class.java)
             val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
             alarmManager.setExact(AlarmManager.RTC_WAKEUP, wakeUpTime, pendingIntent)
             FiveMinutePrefUtil.setAlarmSetTime(nowSeconds, context)
@@ -35,7 +35,7 @@ class FiveMinuteActivity : AppCompatActivity() {
         }
 
         fun removeAlarm(context: Context) {
-            val intent = Intent(context, TimerExpiredReceiver::class.java)
+            val intent = Intent(context, FiveMinuteTimerExpiredReceiver::class.java)
             val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             alarmManager.cancel(pendingIntent)

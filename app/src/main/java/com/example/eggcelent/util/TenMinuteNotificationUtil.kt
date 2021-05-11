@@ -15,7 +15,7 @@ import androidx.core.app.NotificationCompat
 import com.example.eggcelent.AppConstants
 import com.example.eggcelent.TenMinuteActivity
 import com.example.eggcelent.R
-import com.example.eggcelent.TimerNotificationActionReceiver
+import com.example.eggcelent.TenMinuteTimerNotificationActionReceiver
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -26,7 +26,7 @@ class TenMinuteNotificationUtil {
         private const val TIMER_ID = 0
 
         fun showTimerExpired(context: Context){
-            val startIntent = Intent(context, TimerNotificationActionReceiver::class.java)
+            val startIntent = Intent(context, TenMinuteTimerNotificationActionReceiver::class.java)
             startIntent.action = AppConstants.ACTION_START
             val startPendingIntent = PendingIntent.getBroadcast(context,
                 0, startIntent, PendingIntent.FLAG_UPDATE_CURRENT)
@@ -44,12 +44,12 @@ class TenMinuteNotificationUtil {
         }
 
         fun showTimerRunning(context: Context, wakeUpTime: Long){
-            val stopIntent = Intent(context, TimerNotificationActionReceiver::class.java)
+            val stopIntent = Intent(context, TenMinuteTimerNotificationActionReceiver::class.java)
             stopIntent.action = AppConstants.ACTION_STOP
             val stopPendingIntent = PendingIntent.getBroadcast(context,
                 0, stopIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
-            val pauseIntent = Intent(context, TimerNotificationActionReceiver::class.java)
+            val pauseIntent = Intent(context, TenMinuteTimerNotificationActionReceiver::class.java)
             pauseIntent.action = AppConstants.ACTION_PAUSE
             val pausePendingIntent = PendingIntent.getBroadcast(context,
                 0, pauseIntent, PendingIntent.FLAG_UPDATE_CURRENT)
@@ -71,7 +71,7 @@ class TenMinuteNotificationUtil {
         }
 
         fun showTimerPaused(context: Context){
-            val resumeIntent = Intent(context, TimerNotificationActionReceiver::class.java)
+            val resumeIntent = Intent(context, TenMinuteTimerNotificationActionReceiver::class.java)
             resumeIntent.action = AppConstants.ACTION_RESUME
             val resumePendingIntent = PendingIntent.getBroadcast(context,
                 0, resumeIntent, PendingIntent.FLAG_UPDATE_CURRENT)
