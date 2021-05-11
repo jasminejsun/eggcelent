@@ -6,6 +6,13 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="logoDesc">Logo</string>
+    <string name="eggcelent">eggcelent</string>
+    <string name="prompt">how do you like your eggs?</string>
+    <string name="scrambled_text">scrambled</string>
+    <string name="poached_text">poached</string>
+    <string name="sunny_side_up_text">sunny-side-up</string>
+    <string name="boiled_text">boiled</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>

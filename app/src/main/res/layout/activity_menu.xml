@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_yellow"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="144dp"
+            android:layout_height="147dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="@string/logoDesc"
+            android:cropToPadding="false"
+            android:paddingTop="40dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/egg_sitting" />
+
+        <TextView
+            android:id="@+id/eggcelent_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gaegu_bold"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="@string/eggcelent"
+            android:textAlignment="center"
+            android:textColor="@color/darker_brown"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/prompt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gaegu_regular"
+            android:gravity="center"
+            android:text="@string/prompt"
+            android:textAlignment="center"
+            android:textColor="@color/darker_brown"
+            android:textSize="20sp"
+            android:paddingBottom="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/boiled_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_button"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/boiled_menu_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/boiled_main" />
+
+            <TextView
+                android:id="@+id/boiled_menu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_margin="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gaegu_regular"
+                android:textSize="30sp"
+                android:text="@string/boiled_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/poached_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_button"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/poached_menu_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/poached_main" />
+
+            <TextView
+                android:id="@+id/poached_menu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_margin="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gaegu_regular"
+                android:textSize="30sp"
+                android:text="@string/poached_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scrambled_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_button"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/scrambled_menu_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/scrambled_main" />
+
+            <TextView
+                android:id="@+id/scrambled_menu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_margin="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gaegu_regular"
+                android:textSize="30sp"
+                android:text="@string/scrambled_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sunny_side_up_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_button"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/sunny_side_up_menu_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/sunny_side_up_main" />
+
+            <TextView
+                android:id="@+id/sunny_side_up_menu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_margin="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gaegu_regular"
+                android:textSize="30sp"
+                android:text="@string/sunny_side_up_text" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
