@@ -26,33 +26,20 @@
             app:srcCompat="@drawable/egg_sitting" />
 
         <TextView
-            android:id="@+id/eggcelent_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/gaegu_bold"
-            android:gravity="center"
-            android:paddingTop="20dp"
-            android:text="@string/eggcelent"
-            android:textAlignment="center"
-            android:textColor="@color/darker_brown"
-            android:textSize="45sp" />
-
-        <TextView
-            android:id="@+id/prompt_text"
+            android:id="@+id/boiled_prompt_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/gaegu_regular"
             android:gravity="center"
-            android:text="@string/prompt"
+            android:layout_margin="20dp"
+            android:text="@string/boiled_prompt"
             android:textAlignment="center"
             android:textColor="@color/darker_brown"
-            android:textSize="20sp"
-            android:paddingBottom="20dp"/>
+            android:textSize="30sp" />
 
         <LinearLayout
-            android:id="@+id/boiled_menu_button"
+            android:id="@+id/boiled_option_one_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/layout_button"
@@ -62,7 +49,75 @@
             android:layout_marginBottom="15dp">
 
             <ImageView
-                android:id="@+id/boiled_menu_image"
+                android:id="@+id/boiled_option_one_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="5dp"
+                android:clickable="false"
+                android:src="@drawable/soft_boiled" />
+
+            <TextView
+                android:id="@+id/boiled_option_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_margin="5dp"
+                android:paddingEnd="60dp"
+                android:paddingRight="60dp"
+                android:clickable="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gaegu_regular"
+                android:textSize="30sp"
+                android:text="@string/boiled_option_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/boiled_option_two_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_button"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/boiled_option_two_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="5dp"
+                android:clickable="false"
+                android:src="@drawable/boiled_jammy" />
+
+            <TextView
+                android:id="@+id/boiled_option_two_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_margin="5dp"
+                android:clickable="false"
+                android:paddingEnd="114dp"
+                android:paddingRight="114dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gaegu_regular"
+                android:textSize="30sp"
+                android:text="@string/boiled_option_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/boiled_option_three_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_button"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/boiled_option_three_image"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center|start"
@@ -71,7 +126,7 @@
                 android:src="@drawable/boiled_main" />
 
             <TextView
-                android:id="@+id/boiled_menu_text"
+                android:id="@+id/boiled_option_three_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|end"
@@ -82,79 +137,11 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/gaegu_regular"
                 android:textSize="30sp"
-                android:text="@string/boiled_text" />
+                android:text="@string/boiled_option_3" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/poached_menu_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/layout_button"
-            android:clickable="true"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="15dp">
-
-            <ImageView
-                android:id="@+id/poached_menu_image"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center|start"
-                android:layout_marginLeft="5dp"
-                android:clickable="false"
-                android:src="@drawable/poached_main" />
-
-            <TextView
-                android:id="@+id/poached_menu_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
-                android:layout_margin="5dp"
-                android:clickable="false"
-                android:paddingEnd="5dp"
-                android:paddingRight="5dp"
-                android:textColor="@color/white"
-                android:fontFamily="@font/gaegu_regular"
-                android:textSize="30sp"
-                android:text="@string/poached_text" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/scrambled_menu_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/layout_button"
-            android:clickable="true"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="15dp">
-
-            <ImageView
-                android:id="@+id/scrambled_menu_image"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center|start"
-                android:layout_marginLeft="5dp"
-                android:clickable="false"
-                android:src="@drawable/scrambled_main" />
-
-            <TextView
-                android:id="@+id/scrambled_menu_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
-                android:layout_margin="5dp"
-                android:paddingEnd="5dp"
-                android:paddingRight="5dp"
-                android:clickable="false"
-                android:textColor="@color/white"
-                android:fontFamily="@font/gaegu_regular"
-                android:textSize="30sp"
-                android:text="@string/scrambled_text" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/sunny_side_up_menu_button"
+            android:id="@+id/boiled_option_four_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/layout_button"
@@ -164,27 +151,27 @@
             android:layout_marginBottom="30dp">
 
             <ImageView
-                android:id="@+id/sunny_side_up_menu_image"
+                android:id="@+id/boiled_option_four_image"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center|start"
                 android:layout_marginLeft="5dp"
                 android:clickable="false"
-                android:src="@drawable/sunny_side_up_main" />
+                android:src="@drawable/hard_boiled" />
 
             <TextView
-                android:id="@+id/sunny_side_up_menu_text"
+                android:id="@+id/boiled_option_four_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|end"
                 android:layout_margin="5dp"
-                android:paddingEnd="5dp"
-                android:paddingRight="5dp"
+                android:paddingEnd="50dp"
+                android:paddingRight="25dp"
                 android:clickable="false"
                 android:textColor="@color/white"
                 android:fontFamily="@font/gaegu_regular"
                 android:textSize="30sp"
-                android:text="@string/sunny_side_up_text" />
+                android:text="@string/boiled_option_4" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
