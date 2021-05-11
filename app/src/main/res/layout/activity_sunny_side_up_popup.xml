@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_yellow"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_back_arrow"
+            android:backgroundTint="@color/darker_brown" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="144dp"
+            android:layout_height="147dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/logoDesc"
+            android:cropToPadding="false"
+            android:paddingTop="40dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/egg_sitting" />
+
+        <TextView
+            android:id="@+id/sunny_side_up_prompt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/gaegu_regular"
+            android:gravity="center"
+            android:text="@string/sunny_side_up_prompt"
+            android:textAlignment="center"
+            android:textColor="@color/darker_brown"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/sunny_side_up_option_one_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/layout_button"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sunny_side_up_option_one_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="5dp"
+                android:clickable="false"
+                android:src="@drawable/sunny_side_up_runny" />
+
+            <TextView
+                android:id="@+id/sunny_side_up_option_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_margin="5dp"
+                android:clickable="false"
+                android:paddingEnd="6dp"
+                android:paddingRight="6dp"
+                android:fontFamily="@font/gaegu_regular"
+                android:text="@string/sunny_side_up_option_1"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sunny_side_up_option_two_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/layout_button"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sunny_side_up_option_two_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="5dp"
+                android:clickable="false"
+                android:src="@drawable/sunny_side_up_main" />
+
+            <TextView
+                android:id="@+id/sunny_side_up_option_two_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_margin="5dp"
+                android:clickable="false"
+                android:fontFamily="@font/gaegu_regular"
+                android:paddingEnd="26dp"
+                android:paddingRight="26dp"
+                android:text="@string/sunny_side_up_option_2"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

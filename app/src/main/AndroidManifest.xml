@@ -25,6 +25,8 @@
             android:enabled="true"
             android:exported="false" />
 
+        <activity android:name=".SunnySideUpPopupActivity"/>
+        <activity android:name=".PoachedMenuActivity" />
         <activity android:name=".BoiledMenuActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MenuActivity" />

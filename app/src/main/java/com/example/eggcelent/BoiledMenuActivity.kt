@@ -2,12 +2,9 @@ package com.example.eggcelent
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 
 class BoiledMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +24,30 @@ class BoiledMenuActivity : AppCompatActivity() {
 
         boiledOptionOne.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent);
+            intent.putExtra("INITIAL_SCREEN_ID", 1)
+            intent.putExtra("COOK_TIME", 3)
+            startActivity(intent)
+        }
+
+        boiledOptionTwo.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("INITIAL_SCREEN_ID", 1)
+            intent.putExtra("COOK_TIME", 6)
+            startActivity(intent)
+        }
+
+        boiledOptionThree.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("INITIAL_SCREEN_ID", 1)
+            intent.putExtra("COOK_TIME", 10)
+            startActivity(intent)
+        }
+
+        boiledOptionFour.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("INITIAL_SCREEN_ID", 1)
+            intent.putExtra("COOK_TIME", 15)
+            startActivity(intent)
         }
     }
 }

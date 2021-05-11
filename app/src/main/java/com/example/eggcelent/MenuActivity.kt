@@ -24,7 +24,18 @@ class MenuActivity : AppCompatActivity() {
         }
 
         poachedButton.setOnClickListener {
+            val intent = Intent(this, PoachedMenuActivity::class.java)
+            startActivity(intent);
+        }
+
+        scrambledButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("INITIAL_SCREEN_ID", 3)
+            startActivity(intent);
+        }
+
+        sunnySideUpButton.setOnClickListener {
+            val intent = Intent(this, SunnySideUpPopupActivity::class.java)
             startActivity(intent);
         }
     }
