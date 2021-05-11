@@ -25,28 +25,24 @@ class BoiledMenuActivity : AppCompatActivity() {
         boiledOptionOne.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("INITIAL_SCREEN_ID", 1)
-            intent.putExtra("COOK_TIME", 3)
             startActivity(intent)
         }
 
         boiledOptionTwo.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, FiveMinuteActivity::class.java)
             intent.putExtra("INITIAL_SCREEN_ID", 1)
-            intent.putExtra("COOK_TIME", 6)
             startActivity(intent)
         }
 
         boiledOptionThree.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, TenMinuteActivity::class.java)
             intent.putExtra("INITIAL_SCREEN_ID", 1)
-            intent.putExtra("COOK_TIME", 10)
             startActivity(intent)
         }
 
         boiledOptionFour.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("INITIAL_SCREEN_ID", 1)
-            intent.putExtra("COOK_TIME", 15)
             startActivity(intent)
         }
     }

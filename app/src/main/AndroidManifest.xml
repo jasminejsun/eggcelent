@@ -29,6 +29,8 @@
         <activity android:name=".PoachedMenuActivity" />
         <activity android:name=".BoiledMenuActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".FiveMinuteActivity" />
+        <activity android:name=".TenMinuteActivity" />
         <activity android:name=".MenuActivity" />
         <activity
             android:name=".SplashActivity"

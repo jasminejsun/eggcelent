@@ -27,8 +27,8 @@ class SunnySideUpPopupActivity : AppCompatActivity() {
         }
 
         sunnySideUpOptionTwo.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("cookTime", 8)
+            val intent = Intent(this, FiveMinuteActivity::class.java)
+            intent.putExtra("INITIAL_SCREEN_ID", 4)
             startActivity(intent)
         }
     }

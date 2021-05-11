@@ -29,20 +29,20 @@ class PoachedMenuActivity : AppCompatActivity() {
         }
 
         poachedOptionTwo.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("cookTime", 8)
+            val intent = Intent(this, FiveMinuteActivity::class.java)
+            intent.putExtra("INITIAL_SCREEN_ID", 2)
             startActivity(intent)
         }
 
         poachedOptionThree.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("cookTime", 10)
+            val intent = Intent(this, TenMinuteActivity::class.java)
+            intent.putExtra("INITIAL_SCREEN_ID", 2)
             startActivity(intent)
         }
 
         poachedOptionFour.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("cookTime", 12)
+            intent.putExtra("INITIAL_SCREEN_ID", 2)
             startActivity(intent)
         }
     }

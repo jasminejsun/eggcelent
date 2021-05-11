@@ -2,12 +2,12 @@ package com.example.eggcelent.util
 
 import android.content.Context
 import android.preference.PreferenceManager
-import com.example.eggcelent.MainActivity
+import com.example.eggcelent.TenMinuteActivity
 
-class PrefUtil {
+class TenMinutePrefUtil {
     companion object {
         fun getTimerLength(context: Context): Int {
-            return 3
+            return 10
         }
 
         private const val PREVIOUS_TIMER_LENGTH_SECONDS_ID =
@@ -26,13 +26,13 @@ class PrefUtil {
 
         private const val TIMER_STATE_ID = "com.example.eggcelent.timer_state"
 
-        fun getTimerState(context: Context): MainActivity.TimerState {
+        fun getTimerState(context: Context): TenMinuteActivity.TimerState {
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             val ordinal = preferences.getInt(TIMER_STATE_ID, 0)
-            return MainActivity.TimerState.values()[ordinal]
+            return TenMinuteActivity.TimerState.values()[ordinal]
         }
 
-        fun setTimerState(state: MainActivity.TimerState, context: Context) {
+        fun setTimerState(state: TenMinuteActivity.TimerState, context: Context) {
             val editor = PreferenceManager.getDefaultSharedPreferences(context).edit()
             val ordinal = state.ordinal
             editor.putInt(TIMER_STATE_ID, ordinal)
